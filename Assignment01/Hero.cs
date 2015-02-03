@@ -36,6 +36,27 @@ namespace Assignment01
             this.speed = this.rnd.Next(1, 101);
             this.health = this.rnd.Next(1, 101);
         }
+
+        //******************************************Public Methods*************************************************************************
+
+        //This method will call hitAttempt and determine if there was a hit and if there was, how much damage was dealt, by calling hitDamage
+        public void fight()
+        {
+            //hit calling hitAttempt method and will be assigned the returned value
+            bool hit = hitAttempt();
+            int damage = 0;
+            if (hit == true)
+            {
+                damage = hitDamage(); // damage calling hitDamage method and will be assigned the returned value
+                Console.WriteLine("Hit was successful. Damage Dealt: {0}", damage);
+                damage = 0;
+            }
+            else
+            {
+                Console.WriteLine("Hit was not successful. No damage dealt.");
+            }
+
+        }
     }
 
 }
