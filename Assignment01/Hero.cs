@@ -60,8 +60,6 @@ namespace Assignment01
             int totDamage;
             int ranNum;
             ranNum = this.rnd.Next(7, 13) - 6;
-            //used as a check to see if rnd is working
-            //Console.WriteLine(ranNum);
             //damage = strength times a random number between 1 and 6
             totDamage = this.strength * ranNum;
 
