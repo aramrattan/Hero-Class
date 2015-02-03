@@ -88,6 +88,16 @@ namespace Assignment01
             }
 
         }
+
+        //This method will display hero's abilities
+        public void show()
+        {
+            Console.WriteLine("These are Hero {0}'s abilities: ", this.name);
+            Console.WriteLine("Strength: {0}", this.strength);
+            Console.WriteLine("Speed: {0}", this.speed);
+            Console.WriteLine("Health: {0}", this.health);
+
+        }
     }
 
 }
