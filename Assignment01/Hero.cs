@@ -37,6 +37,37 @@ namespace Assignment01
             this.health = this.rnd.Next(1, 101);
         }
 
+        //method to show if hit was successful
+        private bool hitAttempt()
+        {
+
+            bool hit = false;
+            int attemptRate = this.rnd.Next(1, 101);
+            //hit attempt will only be successful 20% of the time
+
+            if (attemptRate % 5 == 0)
+            {
+                hit = true;
+            }
+            // default will be false
+            return hit;
+        }
+
+        //This method will calculate how much damage a hit has caused
+        private int hitDamage()
+        {
+            //totDamage = total damage 
+            int totDamage;
+            int ranNum;
+            ranNum = this.rnd.Next(7, 13) - 6;
+            //used as a check to see if rnd is working
+            //Console.WriteLine(ranNum);
+            //damage = strength times a random number between 1 and 6
+            totDamage = this.strength * ranNum;
+
+            return totDamage;
+        }
+
         //******************************************Public Methods*************************************************************************
 
         //This method will call hitAttempt and determine if there was a hit and if there was, how much damage was dealt, by calling hitDamage
